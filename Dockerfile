@@ -9,13 +9,13 @@ RUN apk add --update --no-cache \
     git bash \
     npm yarn \
 #soap
-  libxml2-dev \
+  libxml2 libxml2-dev \
 #zip
-  libzip-dev \
+  libzip libzip-dev \
 #phar
-  openssl-dev \
+  openssl openssl-dev \
 #gd
-  libpng-dev
+  libpng libpng-dev
 
 #bzip2-dev
 
