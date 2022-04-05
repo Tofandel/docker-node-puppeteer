@@ -50,4 +50,4 @@ RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xd
 RUN rm -rf /tmp/*
 RUN apk del g++ autoconf make libxml2-dev libzip-dev openssl-dev libpng-dev
 
-ENTRYPOINT ['bash']
+ENTRYPOINT ["bash"]
