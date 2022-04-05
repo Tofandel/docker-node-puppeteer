@@ -5,7 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
-    g++ autoconf \
+    g++ autoconf make \
     git bash \
     npm yarn \
 #soap
@@ -24,7 +24,6 @@ ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
 ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
-    
     
 # Preinstalled with
 # ctype curl date dom fileinfo filter ftp hash
@@ -47,5 +46,8 @@ RUN docker-php-ext-install \
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+RUN rm -rf /tmp/*
+RUN apk del g++ autoconf make libxml2-dev libzip-dev openssl-dev libpng-dev
 
 ENTRYPOINT ['bash']
