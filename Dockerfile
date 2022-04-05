@@ -7,7 +7,6 @@ RUN echo "UTC" > /etc/timezone
 RUN apk add --update --no-cache \
     git bash \
     npm yarn \
-    autoconf g++ make \
 #soap
   libxml2-dev \
 #zip
