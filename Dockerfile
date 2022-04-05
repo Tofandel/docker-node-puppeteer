@@ -5,6 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
+    g++ autoconf \
     git bash \
     npm yarn \
 #soap
