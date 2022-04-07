@@ -52,7 +52,7 @@ RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev
 RUN apk add --update --no-cache \
     python3 \
     git bash \
-    npm yarn \
+    npm yarn
 
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
