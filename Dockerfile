@@ -5,9 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
-    g++ autoconf make python3 curl \
-    git bash \
-    npm yarn \
+    g++ autoconf make curl
 #soap
   libxml2 libxml2-dev \
 #zip
@@ -49,6 +47,12 @@ RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xd
 
 RUN rm -rf /tmp/*
 RUN apk del g++ autoconf make libxml2-dev libzip-dev openssl-dev libpng-dev
+
+# Install other libs
+RUN apk add --update --no-cache \
+    python3 \
+    git bash \
+    npm yarn \
 
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
