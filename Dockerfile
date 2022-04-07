@@ -5,7 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
-    g++ autoconf make curl
+    g++ autoconf make curl \
 #soap
   libxml2 libxml2-dev \
 #zip
@@ -46,7 +46,7 @@ RUN docker-php-ext-enable xdebug
 RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN rm -rf /tmp/*
-RUN apk del g++ autoconf make libxml2-dev libzip-dev openssl-dev libpng-dev
+RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev
 
 # Install other libs
 RUN apk add --update --no-cache \
