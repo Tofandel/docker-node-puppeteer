@@ -31,5 +31,5 @@ jobs:
           # The login username for the registry
           username: ${{ secrets.DOCKER_USERNAME }}
           # The login password for the registry
-          password: ${{ secrets.DOCKER_PASSWORD
+          password: ${{ secrets.DOCKER_TOKEN }}
           tag_semver: true
