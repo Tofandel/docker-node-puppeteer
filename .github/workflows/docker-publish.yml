@@ -26,6 +26,7 @@ jobs:
         # uses: elgohr/Publish-Docker-Github-Action@93655185f260b851ede78d9a57760a8bbda65f68
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
+          default_branch: main
           # The name of the image you would like to push
           name: tofandel/php_node
           # The login username for the registry
