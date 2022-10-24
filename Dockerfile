@@ -1,4 +1,4 @@
-FROM php:8.1.12RC1-cli-alpine
+FROM php:8.1.11-cli-alpine
 
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
