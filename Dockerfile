@@ -22,7 +22,7 @@ RUN apk add --update --no-cache \
     git bash \
     npm yarn
     
-RUN apk del --no-cache make gcc g++ python binutils-gold gnupg libstdc++
+RUN apk del --no-cache make gcc g++ binutils-gold gnupg libstdc++
 
 RUN rm -rf /tmp/* \
 /usr/include \
