@@ -1,2 +1,2 @@
-# docker-php-node
-Docker image with PHP and Node
+# docker-node-puppeteer
+Docker image with node and chromium
