@@ -19,8 +19,6 @@ RUN apk add --update --no-cache \
     git \
     npm yarn
     
-RUN npm install -g @vue/cli-service
-    
 RUN apk del --no-cache make gcc g++ binutils-gold gnupg libstdc++
 
 RUN rm -rf /tmp/* \
