@@ -16,8 +16,9 @@ RUN set -x \
 RUN apk add --update --no-cache \
     python3 \
     openssh-client \
-    git \
-    npm yarn
+    git
+    
+RUN npm install -g yarn
     
 RUN apk del --no-cache make gcc g++ binutils-gold gnupg libstdc++
 
