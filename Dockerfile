@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16-alpine
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
 
@@ -16,7 +16,7 @@ RUN set -x \
 RUN apk add --update --no-cache \
     python3 \
     openssh-client \
-    git bash \
+    git \
     npm yarn
     
 RUN apk del --no-cache make gcc g++ binutils-gold gnupg libstdc++
@@ -26,6 +26,3 @@ RUN rm -rf /tmp/* \
 /var/cache/apk/* \
 /root/.node-gyp \
 /usr/share/man
-
-SHELL ["/bin/bash", "-c"]
-ENTRYPOINT ["/bin/bash", "-l", "-c"]
