@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
 
@@ -10,9 +10,6 @@ RUN set -x \
     && apk update \
     && apk upgrade \
     && apk add --no-cache \
-    dumb-init \
-    udev \
-    ttf-freefont \
     chromium
     
 # Install other libs
