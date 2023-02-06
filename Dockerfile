@@ -14,6 +14,9 @@ RUN set -x \
 # Install other libs
 RUN apk add --update --no-cache \
     python3 \
+    rsync \
+    bash \
+    curl \
     openssh-client \
     git npm yarn
     
