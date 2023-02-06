@@ -3,8 +3,7 @@ FROM node:18-alpine
 RUN echo "UTC" > /etc/timezone
 
 
-ENV CHROME_BIN="/usr/bin/chromium-browser" \
-    NODE_ENV="production"
+ENV CHROME_BIN="/usr/bin/chromium-browser"
     
 RUN set -x \
     && apk update \
