@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:18-alpine
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
 
@@ -16,9 +16,7 @@ RUN set -x \
 RUN apk add --update --no-cache \
     python3 \
     openssh-client \
-    git
-    
-RUN npm install -g yarn
+    git npm yarn
     
 RUN apk del --no-cache make gcc g++ binutils-gold gnupg libstdc++
 
