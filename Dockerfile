@@ -17,6 +17,7 @@ RUN apk add --update --no-cache \
     rsync \
     bash \
     curl \
+    openssl \
     openssh-client \
     git npm yarn
     
