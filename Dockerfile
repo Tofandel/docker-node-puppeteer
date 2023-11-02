@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
 
